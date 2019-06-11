@@ -25,6 +25,7 @@ public class End : MonoBehaviour
             if(voiture.list_checkpoint.Count == checkpoints.Length)
             {
                 voiture.Speed = 0;
+                voiture.position_checkpoint = transform.position;
             }
         }
     }

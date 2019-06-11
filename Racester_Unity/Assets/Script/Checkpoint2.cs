@@ -22,7 +22,6 @@ public class Checkpoint2 : MonoBehaviour
     {
         //test = 15;
         if (other.gameObject.tag == "Voiture"){
-            voiture.position_checkpoint = transform.position;
             checkpoint_valide = false;
             foreach(Vector3 chekpoint in voiture.list_checkpoint)
             {
@@ -33,6 +32,7 @@ public class Checkpoint2 : MonoBehaviour
             }
             if (!checkpoint_valide)
             {
+                voiture.position_checkpoint = transform.position;
                 voiture.list_checkpoint.Add(transform.position);
             }
         }

@@ -24,11 +24,11 @@ public class Voiture : MonoBehaviour
     {
         timer += Time.deltaTime;
         Rigidbody r = GetComponent<Rigidbody>();
-        if ((Input.GetKey(KeyCode.RightArrow)) || (Input.GetKey(KeyCode.Q)))
+        if ((Input.GetKey(KeyCode.RightArrow)) || (Input.GetKey(KeyCode.D)))
         {
             GetComponent<Transform>().Rotate(new Vector3(0, 1, 0));
         }
-        else if ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.D)))
+        else if ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.Q)))
         {
             GetComponent<Transform>().Rotate(new Vector3(0, -1, 0));
         }
@@ -54,7 +54,9 @@ public class Voiture : MonoBehaviour
         else if (Input.GetKey(KeyCode.Backspace))
         {
             transform.position = position_checkpoint;
-
+            Speed = 0;
+            timer_up = 0;
+      
         }
         else if (Input.GetKey(KeyCode.Delete))
         {
